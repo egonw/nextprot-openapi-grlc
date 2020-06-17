@@ -8,7 +8,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 
 select distinct ?entry ?gen ?pathwayname where {
-    service <http://sparql.wikipathways.org/sparql> {
+    service <http://85.214.42.229:8890/sparql> {
 
         {?geneProduct a wp:Protein}
             union
