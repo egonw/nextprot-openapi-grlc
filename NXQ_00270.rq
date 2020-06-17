@@ -1,5 +1,7 @@
 #+ summary: Lists proteins belonging to Rett syndrome pathways, and their subcellular locations (GOLD)
 #+ endpoint_in_url: False
+#+ tags:
+#+   - Federation with WikiPathways
 
 PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
