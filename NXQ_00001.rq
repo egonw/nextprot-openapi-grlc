@@ -1,5 +1,8 @@
 #+ summary: Get phosphorylated proteins in the cytoplasm
 #+ endpoint_in_url: False
+#+ enumerate:
+#+   - term
+
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -9,7 +12,7 @@ PREFIX cv: <http://nextprot.org/rdf/terminology/>
 select distinct ?entry where {
   values ?cytoloc {cv:SL-0086 cv:GO_0005737} # SL and GO values for cytoplasm
   ?entry :isoform ?iso.
-  ?iso :keyword / :term cv:KW-0597. # Phosphorylated
+  ?iso :keyword / :term ?_term_string . # Phosphorylated
   ?iso :cellularComponent ?loc .
   ?loc :term /:childOf ?cytoloc.
   filter not exists {?loc  :negativeEvidence ?negev} # No negative localization evidence
