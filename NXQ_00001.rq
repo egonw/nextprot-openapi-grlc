@@ -1,6 +1,11 @@
 #+ summary: Get phosphorylated proteins in the cytoplasm
 #+ endpoint_in_url: False
 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX : <http://nextprot.org/rdf#>
+PREFIX cv: <http://nextprot.org/rdf/terminology/>
+
 select distinct ?entry where {
   values ?cytoloc {cv:SL-0086 cv:GO_0005737} # SL and GO values for cytoplasm
   ?entry :isoform ?iso.
